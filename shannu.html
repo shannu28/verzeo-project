@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list Web page</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="shannu.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<header> 
+      <marquee>To-do list</marquee>
+</header>
+<body>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="new-task" > <b>New Task</b>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+        <button onclick="taskdeets()">+</button>
+    </div>
+
+    <br><br>
+    <div align="center" id="clickdrop">
+        <form>
+            <div>
+                <input type="text" id="taskname" class="input-control" placeholder="Name your task ..">
+            </div>
+            <br>
+            <div class="input-form">
+                <input type="text" id="taskdesc" class="input-control" placeholder="Task Description ..">
+            </div>
+        </form>
+        <br>
+        <select id="priority">
+            <option selected disabled>Select priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <br>
+        
+        <br>
+        <button id="btn" onclick="aftersave()">Save</button>
+        <br>
+    </div>
+
+    
+    <table id="display" align="center">
+        <thead>
+        <tr id="all-rows">
+            <th>Task Name</th> 
+            <th>Task Description</th>
+            <th>priority</th> 
+        </thead>
+        </tr>
+    </table>
+
+    <table id="allfilterlow">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Task Description</th>
+        </tr>
+    </thead>
+    </table>
+
+    <table id="allfiltermedium">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Task Description</th>
+        </tr>
+    </thead>
+    </table>
+
+    <table id="allfilterhigh">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Task Description</th>
+        </tr>
+    </thead>
+    </table>
+    
+    <div>
+        <h4>Filters:</h4>
+        <button id="low-btn" onclick="filterlow()">Low</button>
+        <button id="medium-btn" onclick="filtermedium()">Medium</button>
+        <button id="high-btn" onclick="filterhigh()">High</button>
+        <button id="all-btn" onclick="showall()">All</button>
+    </div>
+    <br><br><br>
+    <footer>
+        <marquee direction="left"><b><h2>GO FOR IT &nbsp &nbsp &nbsp &nbsp ch Thank you and visit again</h2></b></marquee>
+    </footer>
+    <script src="shannu.js" ></script>
+</body>
+
+</html>
